@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 769px;
+  --breakpoint-xl: 992px;
+  --breakpoint-2xl: 1200px;
+  --breakpoint-3xl: 1400px;
+
+  /* Fonts */
+  --font-nunito: 'nunito', 'sans-serif';
+  --font-roboto: 'roboto', 'sans-serif';
+  --font-poppins-Regular: 'poppins-Regular', 'sans-serif';
+  --font-Poppins-Medium: 'poppins-Medium', 'sans-serif';
+  --font-Poppins-SemiBold: 'poppins-SemiBold', 'sans-serif';
+
+  /* Color */
+  --color-heading: #012970;
+  --color-accent: #4154f1;
+  --color-default: #444444;
+  --color-dark: #212529;
+  --color-accent-shade: rgba(65, 84, 241, 0.1);
+  --color-cu-red: #df1529;
+  --color-cu-pink: #f3268c;
+  --color-cu-orange: #fd7e14;
+  --color-cu-purple: #6610f2;
+  --color-cu-blue: ##0d6efd;
+  --color-cu-cyan: #0dcaf0;
+  --color-cu-green: #20c997;
+}
+
+/* Fonts */
+@font-face {
+  font-family: nunito;
+  font-style: normal;
+  font-weight: 200 700;
+
+  font-display: swap;
+  src: url('/font/Nunito/Nunito-VariableFont.ttf') format('truetype');
+}
+@font-face {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url('/font/Roboto/Roboto-VariableFont.ttf') format('truetype');
+}
+@font-face {
+  font-family: poppins-Regular;
+  font-style: normal;
+  font-display: swap;
+  src: url('/font/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: poppins-Medium;
+  font-style: normal;
+  font-display: swap;
+  src: url('/font/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: poppins-SemiBold;
+  font-style: normal;
+  font-display: swap;
+  src: url('/font/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
