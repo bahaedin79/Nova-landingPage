@@ -65,3 +65,35 @@
   font-display: swap;
   src: url('/font/Poppins/Poppins-SemiBold.ttf') format('truetype');
 }
+
+@layer components {
+  .cu-container {
+    padding: 0 15px;
+  }
+}
+
+@layer utilities {
+  #nav {
+    @apply flex justify-between items-center mt-4;
+  }
+
+  .nav__logo {
+    @apply flex items-center gap-2;
+  }
+
+  .nav__logo-text {
+    @apply text-3xl font-bold text-heading;
+  }
+
+  .mobile-nav__list {
+    @apply hidden flex flex-col gap-8 absolute top-0 right-0 bottom-0 bg-amber-200 px-16 pt-16 pb-8 text-dark font-Poppins-Medium text-[17px];
+  }
+
+  .nav__cta-btn {
+    @apply font-roboto text-[16px] bg-accent text-white px-[15px] py-1.5 rounded-md mr-[-1rem];
+  }
+
+  .mobile-nav__ham-icon {
+    @apply text-2xl text-accent inline-block;
+  }
+}
