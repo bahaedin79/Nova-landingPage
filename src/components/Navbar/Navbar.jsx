@@ -1,17 +1,25 @@
 import React from 'react';
+import { useState, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
 import { FaXmark } from 'react-icons/fa6';
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navOverlayRef = useRef(null);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav id="nav" className="container-fluid">
       <Link to="/" className="nav__logo">
         <img src="/images/logo.png" alt="logo" />
         <h1 className="nav__logo-text">NOVA</h1>
       </Link>
-      <ul className="mobile-nav__list">
-        <FaXmark className="mobile-nav__ham-icon" />
+      <ul className={`mobile-nav__list ${isMobileMenuOpen ? 'mobile-nav__list--open' : ''}`}>
+        <FaXmark className="mobile-nav__ham-icon" onClick={toggleMobileMenu} />
         <li className="mobile-nav__list-item">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'nav__list-item--active' : 'mobile-nav__link')}>
             Home
@@ -37,6 +45,7 @@ function Navbar() {
             Team
           </a>
         </li>
+
         <li className="mobile-nav__list-item">
           <NavLink to="/blog" className={({ isActive }) => (isActive ? 'nav__list-item--active' : 'mobile-nav__link')}>
             Blog
@@ -48,6 +57,7 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      <div onClick={toggleMobileMenu} className={`overlay ${isMobileMenuOpen ? 'fixed' : ''}`}></div>
       <ul className="nav__list">
         <li className="nav__list-item">
           <NavLink to="/" className={({ isActive }) => (isActive ? 'nav__list-item--active' : 'nav__link')}>
@@ -89,7 +99,9 @@ function Navbar() {
         <a href="#" className="nav__cta-btn">
           Get Started
         </a>
-        <FaBars className="mobile-nav__ham-icon" />
+        <div>
+          <FaBars className="mobile-nav__ham-icon" onClick={toggleMobileMenu} />
+        </div>
       </div>
     </nav>
   );

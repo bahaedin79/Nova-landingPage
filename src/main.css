@@ -87,7 +87,13 @@
   }
 
   .mobile-nav__list {
-    @apply flex flex-col justify-center items-center gap-8 absolute top-0 right-0 bottom-0 bg-accent-light w-2/3 text-dark font-Poppins-Medium text-[17px] sm:text-[20px] sm:w-1/2 xl:hidden;
+    @apply flex flex-col justify-center items-center gap-8 fixed top-0 right-0 bottom-0 w-2/3
+     bg-accent-light text-dark font-Poppins-Medium text-[17px] sm:text-[20px] xl:hidden
+    translate-x-full duration-300 ease-out opacity-0 z-[9999];
+  }
+
+  .mobile-nav__list--open {
+    @apply translate-x-0 opacity-100;
   }
 
   .nav__list-item--active {
@@ -98,13 +104,16 @@
   }
 
   .nav__cta-btn {
-    @apply font-roboto text-[16px] bg-accent text-white px-[15px] py-1.5 rounded-md lg:text-base  lg:px-5;
+    @apply font-roboto text-[16px] bg-accent text-white px-[15px] py-1.5 rounded-md lg:text-base lg:px-5;
   }
 
   .mobile-nav__ham-icon {
     @apply text-2xl text-accent inline-block xl:hidden;
   }
 
+  .overlay {
+    @apply top-0 right-0 bottom-0 left-0 bg-black opacity-50 z-[9998] xl:hidden;
+  }
   /* Navbar List Desktop */
   .nav__list {
     @apply hidden xl:flex items-center gap-8 text-heading text-[15px] font-Poppins-Medium;
