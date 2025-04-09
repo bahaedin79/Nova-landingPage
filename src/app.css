@@ -19,14 +19,15 @@
   /* Color */
   --color-heading: #012970;
   --color-accent: #4154f1;
+  --color-accent-light: #ecedfd;
+  --color-accent-shade: rgba(65, 84, 241, 0.1);
   --color-default: #444444;
   --color-dark: #212529;
-  --color-accent-shade: rgba(65, 84, 241, 0.1);
   --color-cu-red: #df1529;
   --color-cu-pink: #f3268c;
   --color-cu-orange: #fd7e14;
   --color-cu-purple: #6610f2;
-  --color-cu-blue: ##0d6efd;
+  --color-cu-blue: #0d6efd;
   --color-cu-cyan: #0dcaf0;
   --color-cu-green: #20c997;
 }
@@ -67,14 +68,14 @@
 }
 
 @layer components {
-  .cu-container {
-    padding: 0 15px;
+  .container-fluid {
+    @apply max-w-[1320px] mx-auto px-3.5;
   }
 }
 
 @layer utilities {
   #nav {
-    @apply flex justify-between items-center mt-4;
+    @apply flex justify-between items-center mt-8;
   }
 
   .nav__logo {
@@ -86,14 +87,33 @@
   }
 
   .mobile-nav__list {
-    @apply hidden flex flex-col gap-8 absolute top-0 right-0 bottom-0 bg-amber-200 px-16 pt-16 pb-8 text-dark font-Poppins-Medium text-[17px];
+    @apply flex flex-col justify-center items-center gap-8 absolute top-0 right-0 bottom-0 bg-accent-light w-2/3 text-dark font-Poppins-Medium text-[17px] sm:text-[20px] sm:w-1/2 xl:hidden;
+  }
+
+  .nav__list-item--active {
+    @apply text-accent;
+  }
+  .nav__right {
+    @apply flex items-center gap-3;
   }
 
   .nav__cta-btn {
-    @apply font-roboto text-[16px] bg-accent text-white px-[15px] py-1.5 rounded-md mr-[-1rem];
+    @apply font-roboto text-[16px] bg-accent text-white px-[15px] py-1.5 rounded-md lg:text-base  lg:px-5;
   }
 
   .mobile-nav__ham-icon {
-    @apply text-2xl text-accent inline-block;
+    @apply text-2xl text-accent inline-block xl:hidden;
   }
+
+  /* Navbar List Desktop */
+  .nav__list {
+    @apply hidden xl:flex items-center gap-8 text-heading text-[15px] font-Poppins-Medium;
+  }
+
+  /* .nav__list-item{
+    @apply
+  }
+  .nav__link{
+    @apply
+}*/
 }

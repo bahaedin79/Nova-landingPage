@@ -1,10 +1,14 @@
 import React from 'react';
-import Header from './components/Header/Header';
+import { useRoutes } from 'react-router-dom';
+import routes from './Routes';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
+  const router = useRoutes(routes);
   return (
     <div>
-      <Header></Header>
+      <Navbar />
+      {router}
     </div>
   );
 }
