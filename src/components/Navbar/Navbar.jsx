@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <nav id="nav" className="container-fluid">
+    <nav id="nav" className="container-fluid ">
       <Link to="/" className="nav__logo">
         <img src="/images/logo.png" alt="logo" />
         <h1 className="nav__logo-text">NOVA</h1>

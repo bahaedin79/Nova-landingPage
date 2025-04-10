@@ -21,8 +21,9 @@
   --color-accent: #4154f1;
   --color-accent-light: #ecedfd;
   --color-accent-shade: rgba(65, 84, 241, 0.1);
-  --color-default: #444444;
   --color-dark: #212529;
+  --color-default: #444444;
+  --color-cuGray: #78797b;
   --color-cu-red: #df1529;
   --color-cu-pink: #f3268c;
   --color-cu-orange: #fd7e14;
@@ -30,6 +31,9 @@
   --color-cu-blue: #0d6efd;
   --color-cu-cyan: #0dcaf0;
   --color-cu-green: #20c997;
+
+  /* Animation */
+  --animate-UpAndDown: UpAndDown 5s ease-in-out infinite;
 }
 
 /* Fonts */
@@ -65,6 +69,13 @@
   font-style: normal;
   font-display: swap;
   src: url('/font/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+body {
+  background-image: url(./images/hero-bg.png);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 @layer components {
@@ -119,10 +130,65 @@
     @apply hidden xl:flex items-center gap-8 text-heading text-[15px] font-Poppins-Medium;
   }
 
-  /* .nav__list-item{
-    @apply
+  /* SECTION HERO */
+
+  #hero {
+    @apply flex flex-col items-center justify-center mt-10
+    xl:flex-row-reverse xl:mt-24;
   }
-  .nav__link{
-    @apply
-}*/
+  .hero__img {
+    @apply max-w-[320px] sm:max-w-none animate-UpAndDown
+    xl:w-1/2 xl:max-w-none;
+  }
+  .hero__content {
+    @apply mt-4 sm:max-w-[540px] lg:max-w-[720px]
+    xl:max-w-none;
+  }
+  .hero__title {
+    @apply text-heading leading-8 text-[26px] font-nunito font-[700] 
+    md:text-5xl md:leading-14;
+  }
+  .hero__description {
+    @apply font-roboto text-cuGray font-normal text-lg mt-3
+    md:text-xl;
+  }
+  .hero__cta {
+    @apply flex flex-col mt-7 text-center
+    lg:flex-row;
+  }
+  .hero__cta-btn {
+    @apply flex items-center justify-center gap-2 py-3 px-10 bg-accent font-nunito text-base rounded-sm font-medium text-white
+    lg:max-w-[230px] lg:h-12;
+  }
+  .hero__cta-btn--transparent {
+    @apply bg-transparent text-dark;
+  }
+  .hero__cta-icon {
+    @apply text-2xl;
+  }
+  .hero__cta-icon:nth-child(1) {
+    @apply text-4xl text-accent;
+  }
+  /* 
+
+.hero__text{
+  @apply
+}
+
+
+
+
+*/
+}
+
+@keyframes UpAndDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
