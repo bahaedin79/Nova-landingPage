@@ -3,8 +3,8 @@ import React from 'react';
 export default function Value() {
   return (
     <section id="value" className="flex flex-col items-center justify-center gap-5 mt-25">
-      <h2 className="text-[13px] font-roboto text-accent py-1.5 px-5 uppercase tracking-wide bg-accent-light font-bold rounded-full">Our Values</h2>
-      <h3 className="text-heading text-3xl font-nunito font-bold">What we value most</h3>
+      <h2 className="section__subtitle">Our Values</h2>
+      <h3 className="section__title">What we value most</h3>
       <div
         className="grid grid-cols-1 grid-rows-3 gap-5 mt-20
       xl:grid-cols-3 xl:grid-rows-1"

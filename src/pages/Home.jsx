@@ -4,6 +4,8 @@ import About from '../components/About/About';
 import Value from '../components/Value/Value';
 import Stats from '../components/Stats/Stats';
 import Features from '../components/Features/Features';
+import Services from '../components/Services/Services';
+import Pricing from '../components/Pricing/Pricing';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Value />
       <Stats />
       <Features />
+      <Services />
+      <Pricing />
     </div>
   );
 }
