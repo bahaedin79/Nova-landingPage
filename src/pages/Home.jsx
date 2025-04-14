@@ -6,6 +6,8 @@ import Stats from '../components/Stats/Stats';
 import Features from '../components/Features/Features';
 import Services from '../components/Services/Services';
 import Pricing from '../components/Pricing/Pricing';
+import FaqSection from '../components/FaqSection/FaqSection';
+import Portfolio from '../components/Portfolio/Portfolio';
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Features />
       <Services />
       <Pricing />
+      <FaqSection />
+      <Portfolio />
     </div>
   );
 }
