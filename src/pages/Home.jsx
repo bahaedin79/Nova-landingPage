@@ -8,6 +8,7 @@ import Services from '../components/Services/Services';
 import Pricing from '../components/Pricing/Pricing';
 import FaqSection from '../components/FaqSection/FaqSection';
 import Portfolio from '../components/Portfolio/Portfolio';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Pricing />
       <FaqSection />
       <Portfolio />
+      <Testimonials />
     </div>
   );
 }
