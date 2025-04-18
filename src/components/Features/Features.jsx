@@ -18,7 +18,7 @@ export default function Features() {
       2xl:flex-row 2xl:justify-between 2xl:mt-6"
       >
         <div className="2xl:max-w-1/2">
-          <img className="w-full 2xl:w-4/5" src="/images/features.png" alt="our features section image" />
+          <img className="w-full 2xl:w-4/5" src="/images/features/features.png" alt="our features section image" />
         </div>
         <ul
           className="grid grid-cols-1 grid-rows-6 gap-6
@@ -54,7 +54,7 @@ export default function Features() {
       {/* Second Section Of Page */}
       <div className="flex flex-col gap-5 mt-25 2xl:flex-row-reverse">
         <div className="m-auto xl:flex-1/3">
-          <img className="w-full " src="/images/features2.png" alt="" />
+          <img className="w-full " src="/images/features/features2.png" alt="" />
         </div>
         <ul
           className="grid grid-cols-1 grid-rows-6 gap-5 mt-10 

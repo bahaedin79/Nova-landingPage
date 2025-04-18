@@ -121,6 +121,29 @@
   .mobile-nav__list--open {
     @apply translate-x-0 opacity-100;
   }
+  .testimonials__star {
+    @apply text-lg;
+  }
+  .testimonials__star.active {
+    @apply text-yellow-500;
+  }
+  /* swiper Styles */
+  .swiper-slide {
+    @apply opacity-40 transition-all;
+  }
+  .swiper-slide-active {
+    @apply opacity-100 transition-all;
+  }
+  .swiper-pagination-bullet {
+    @apply w-2.5! h-2.5! bg-gray-300! opacity-50! transition-all! duration-300! rounded-full!;
+  }
+  .swiper-pagination-bullet-active {
+    @apply w-3.5! h-3.5! bg-sky-500! opacity-100! scale-110!;
+  }
+  .masked-img {
+    mask: url('./images/wave.svg') no-repeat center bottom;
+    -webkit-mask: url('./images/wave.svg') no-repeat center bottom;
+  }
 }
 
 @keyframes UpAndDown {

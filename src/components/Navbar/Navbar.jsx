@@ -14,8 +14,7 @@ function Navbar() {
   return (
     <nav className="max-w-[1320px] mx-auto px-3.5 mt-5 flex items-center justify-between">
       <Link to="/" className="flex items-center gap-2">
-        <img src="/images/logo.png" alt="logo" />
-        <h1 className="text-3xl font-bold font-nunito text-heading">NOVA</h1>
+        <img className="w-26 xl:w-36" src="/images/nova-logo.webp" alt="logo" />
       </Link>
       {/* Mobile NavBar */}
       <ul

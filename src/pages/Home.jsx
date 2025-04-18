@@ -9,6 +9,7 @@ import Pricing from '../components/Pricing/Pricing';
 import FaqSection from '../components/FaqSection/FaqSection';
 import Portfolio from '../components/Portfolio/Portfolio';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Team from '../components/Team/Team';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <FaqSection />
       <Portfolio />
       <Testimonials />
+      <Team />
     </div>
   );
 }
