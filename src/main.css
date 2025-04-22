@@ -140,10 +140,6 @@
   .swiper-pagination-bullet-active {
     @apply w-3.5! h-3.5! bg-sky-500! opacity-100! scale-110!;
   }
-  .masked-img {
-    mask: url('./images/wave.svg') no-repeat center bottom;
-    -webkit-mask: url('./images/wave.svg') no-repeat center bottom;
-  }
 }
 
 @keyframes UpAndDown {
