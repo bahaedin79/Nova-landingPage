@@ -1,0 +1,85 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "productName": "book 1",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/books/books-1.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "book 2",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/books/books-2.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "book 3",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/books/books-3.jpg"
+    }
+  ],
+
+  "branding": [
+    {
+      "id": 1,
+      "productName": "branding 1",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/branding/branding-1.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "branding 2",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/branding/branding-2.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "branding 3",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/branding/branding-3.jpg"
+    }
+  ],
+
+  "app": [
+    {
+      "id": 1,
+      "productName": "app 1",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/apps/app-1.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "app 2",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/apps/app-2.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "app 3",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/apps/app-3.jpg"
+    }
+  ],
+
+  "product": [
+    {
+      "id": 1,
+      "productName": "product 1",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/product/product-1.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "product 2",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/product/product-2.jpg"
+    },
+    {
+      "id": 3,
+      "productName": "product 3",
+      "productDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "productImage": "./images/portfolio/product/product-3.jpg"
+    }
+  ]
+}

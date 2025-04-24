@@ -1,0 +1,34 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Is it really possible to receive the product the next day? Json",
+      "answer": "You can log in to your account and check the \"My Orders\" section to see the status of your order. An email with a tracking code will also be sent to you."
+    },
+    {
+      "id": 2,
+      "question": "Can I return the product?",
+      "answer": "Yes, you can return the product within 7 days of receiving it, provided it is unused and undamaged. You can initiate the return process through your user panel."
+    },
+    {
+      "id": 3,
+      "question": "What are the payment methods?",
+      "answer": "We support various payment methods, including bank cards, online payments, and cash on delivery. You can choose your preferred method at the final stage of the shopping cart."
+    },
+    {
+      "id": 4,
+      "question": "How much is the shipping cost?",
+      "answer": "The shipping cost depends on the destination, package weight, and selected shipping method. For orders over $500, shipping is free. The exact cost will be calculated at the final stage of the shopping cart."
+    },
+    {
+      "id": 5,
+      "question": "How can I track my order?",
+      "answer": "After placing your order, you will receive an email with a tracking code. You can use this code to track your order on our website or through the courier service."
+    },
+    {
+      "id": 6,
+      "question": "Do you offer international shipping?",
+      "answer": "Yes, we offer international shipping to selected countries. Shipping costs and delivery times vary depending on the destination. Please check the shipping options during checkout."
+    }
+  ]
+}
