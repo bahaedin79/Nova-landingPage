@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
-import Value from '../components/Value/Value';
+import Commitment from '../components/Commitment/Commitment';
 import Stats from '../components/Stats/Stats';
 import Features from '../components/Features/Features';
 import Services from '../components/Services/Services';
@@ -16,7 +16,7 @@ export default function Home() {
     <div className="container-fluid">
       <Hero />
       <About />
-      <Value />
+      <Commitment />
       <Stats />
       <Features />
       <Services />

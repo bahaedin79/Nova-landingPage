@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Value() {
   return (
-    <section id="value" className="flex flex-col items-center justify-center gap-5 mt-25 ">
+    <section id="value" className="mt-25 flex flex-col items-center justify-center gap-5">
       <h2 className="section__subtitle">Our Commitment</h2>
-      <h3 className="section__title text-center max-w-80">What We Prioritize in Our Services</h3>
+      <h3 className="section__title max-w-80 text-center">What We Prioritize in Our Services</h3>
       <div
         className="grid grid-cols-1 grid-rows-3 gap-5 mt-10
         lg:grid-cols-2 lg:grid-rows-2
@@ -12,10 +12,10 @@ export default function Value() {
         2xl:[grid-template-columns:repeat(3,360px)] 2xl:justify-between 2xl:gap-0 2xl:w-full"
       >
         <div
-          className="flex flex-col items-center gap-2 text-center shadow-value-card p-5 rounded-xl group max-w-[336px] xl:max-w-none
-          bg-gradient-to-b from-accent/50 to-accent-light 2xl:max-w-[380px]"
+          className="flex flex-col items-center gap-2 text-center p-5 rounded-xl group max-w-[336px] xl:max-w-none
+          bg-accent-light 2xl:max-w-[380px]"
         >
-          <div className="mb-5 relative">
+          <div className="relative pt-3 mb-5">
             <img
               className="w-[250px] h-[200px] rounded-md xl:w-[297px] xl:h-[240px] object-cover "
               src="/images/values/Professional.webp"
@@ -34,15 +34,15 @@ export default function Value() {
             </figcaption>
           </div>
           <h3 className="text-heading font-nunito text-2xl font-bold">Professional Web Development</h3>
-          <p className="text-gray-600 text-base font-roboto">
+          <p className="font-roboto text-base text-gray-600">
             We focus on creating modern, responsive, and user-friendly websites tailored to your business needs.
           </p>
         </div>
         <div
-          className="flex flex-col items-center gap-2 text-center shadow-value-card p-5 rounded-xl group max-w-[336px] xl:max-w-none
-         bg-gradient-to-b from-accent/50 to-accent-light 2xl:max-w-[380px]"
+          className="flex flex-col items-center gap-2 text-center p-5 rounded-xl group max-w-[336px] xl:max-w-none
+         bg-accent-light 2xl:max-w-[380px]"
         >
-          <div className="mb-5 relative">
+          <div className="relative pt-3 mb-5">
             <img
               className="w-[250px] h-[200px] rounded-md xl:w-[297px] xl:h-[240px] object-cover"
               src="/images/values/support.webp"
@@ -61,17 +61,17 @@ export default function Value() {
             </figcaption>
           </div>
           <h3 className="text-heading font-nunito text-2xl font-bold">Reliable Support</h3>
-          <p className="text-gray-600 text-pretty text-base font-roboto">
+          <p className="text-pretty font-roboto text-base text-gray-600">
             Our team is dedicated to providing exceptional support to ensure your website runs smoothly at all times.
           </p>
         </div>
         <div
-          className="flex flex-col items-center gap-2 text-center shadow-value-card p-5 rounded-xl group max-w-[336px] 
-          bg-gradient-to-b from-accent/50 to-accent-light
+          className="flex flex-col items-center gap-2 text-center p-5 rounded-xl group max-w-[336px] 
+          bg-accent-light
           lg:col-span-2 lg:row-start-2 lg:justify-self-center
           xl:max-w-none xl:col-auto xl:row-auto xl:justify-self-start 2xl:max-w-[380px]"
         >
-          <div className="mb-5 relative">
+          <div className="relative pt-3 mb-5">
             <img
               className="w-[250px] h-[200px] rounded-md xl:w-[297px] xl:h-[240px] object-cover"
               src="/images/values/Satisfaction.webp"
@@ -90,7 +90,7 @@ export default function Value() {
             </figcaption>
           </div>
           <h3 className="text-heading font-nunito text-2xl font-bold">Customer Satisfaction</h3>
-          <p className="text-gray-600 text-pretty text-base font-roboto">
+          <p className="text-pretty font-roboto text-base text-gray-600">
             We prioritize your satisfaction by delivering high-quality services that exceed your expectations.
           </p>
         </div>

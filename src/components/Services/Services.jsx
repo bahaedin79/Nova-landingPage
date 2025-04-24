@@ -1,85 +1,87 @@
 import React from 'react';
 import { HiArrowRight } from 'react-icons/hi2';
-import { BsAward } from 'react-icons/bs';
-import { BsDribbble } from 'react-icons/bs';
-import { BsCardChecklist } from 'react-icons/bs';
-import { BsBoxes } from 'react-icons/bs';
-import { BsDisc } from 'react-icons/bs';
-import { BsFileEarmarkLock } from 'react-icons/bs';
+import { BsDisplay } from 'react-icons/bs';
+import { BsLaptop } from 'react-icons/bs';
+import { BsGlobe } from 'react-icons/bs';
+import { BsPencilSquare } from 'react-icons/bs';
+import { BsLightbulb } from 'react-icons/bs';
+import { BsLayoutWtf } from 'react-icons/bs';
 
 export default function Services() {
   return (
-    <section className="flex flex-col items-center justify-center gap-5 text-center my-25">
-      <h2 className="section__subtitle">Services</h2>
-      <h3 className="section__title">Check Our Services</h3>
-      <ul
-        className="grid grid-cols-1 grid-rows-6 gap-7
-        lg:grid-cols-2 lg:grid-rows-3
-        xl:grid-cols-3 xl:grid-rows-2"
-      >
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-cyan transition-all duration-300 rounded-md border-b-4 border-cu-cyan">
-          <BsAward className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-cyan bg-cu-cyan-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-cyan group-hover:text-white">
-            <a href="#">Read More</a>
+    <section className="my-25 flex flex-col items-center justify-center gap-4 px-4 text-center">
+      <h2 className="section__subtitle hover:scale-105 mb-2 transition-transform duration-300 transform">Services</h2>
+      <h3 className="section__title max-w-xl mb-6">Check Our Professional Services</h3>
+      <ul className="lg:grid-cols-2 lg:grid-rows-3 xl:grid-cols-3 xl:grid-rows-2 grid max-w-6xl grid-cols-1 grid-rows-6 gap-8 mx-auto">
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-cyan absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-cyan-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsDisplay className="text-cu-cyan text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">UI/UX Design</h4>
+          <p className="text-cuGray text-base">Create intuitive and engaging user experiences with our expert UI/UX design services.</p>
+          <div className="text-cu-cyan group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-orange transition-all duration-300 rounded-md border-b-4 border-cu-orange">
-          <BsDribbble className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-orange bg-cu-orange-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-orange group-hover:text-white">
-            <a href="#">Read More</a>
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-orange absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-orange-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsLaptop className="text-cu-orange text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">Application Design</h4>
+          <p className="text-cuGray text-base">Build powerful applications with modern interfaces and seamless functionality.</p>
+          <div className="text-cu-orange group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-green transition-all duration-300 rounded-md border-b-4 border-cu-green">
-          <BsAward className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-green bg-cu-green-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-green group-hover:text-white">
-            <a href="#">Read More</a>
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-green absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-green-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsGlobe className="text-cu-green text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">Website Design</h4>
+          <p className="text-cuGray text-base">Develop responsive websites that look great on all devices and drive results.</p>
+          <div className="text-cu-green group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-red transition-all duration-300 rounded-md border-b-4 border-cu-red">
-          <BsBoxes className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-red bg-cu-red-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-red group-hover:text-white">
-            <a href="#">Read More</a>
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-red absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-red-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsPencilSquare className="text-cu-red text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">UI Design</h4>
+          <p className="text-cuGray text-base">Create visually stunning interfaces that enhance user experience and engagement.</p>
+          <div className="text-cu-red group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-purple transition-all duration-300 rounded-md border-b-4 border-cu-purple">
-          <BsDisc className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-purple bg-cu-purple-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-purple group-hover:text-white">
-            <a href="#">Read More</a>
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-purple absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-purple-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsLightbulb className="text-cu-purple text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">Design System</h4>
+          <p className="text-cuGray text-base">Implement consistent design systems that scale with your product and brand.</p>
+          <div className="text-cu-purple group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>
-        <li className="flex flex-col gap-5 items-center text-center shadow-value-card py-15 px-5 group hover:cursor-pointer hover:bg-cu-pink transition-all duration-300 rounded-md border-b-4 border-cu-pink">
-          <BsFileEarmarkLock className="p-5 min-w-[80px] min-h-[80px] rounded-md text-cu-pink bg-cu-pink-shade group-hover:bg-white" />
-          <h4 className="text-heading text-2xl font-nunito font-bold group-hover:text-white">Dolori Architecto</h4>
-          <p className="text-base text-cuGray group-hover:text-white">
-            Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.
-          </p>
-          <div className="flex justify-center items-center gap-2 font-bold text-cu-pink group-hover:text-white">
-            <a href="#">Read More</a>
+        <li className="group hover:shadow-xl hover:-translate-y-1 rounded-xl relative flex flex-col items-start gap-4 px-6 py-8 overflow-hidden text-left transition-all duration-300 bg-white shadow-lg cursor-pointer">
+          <div className="bg-cu-pink absolute top-0 bottom-0 left-0 w-1.5 group-hover:w-2 transition-all duration-300"></div>
+          <div className="bg-cu-pink-shade group-hover:shadow group-hover:scale-105 flex items-center justify-center w-12 h-12 p-2 transition-all duration-300 transform rounded-lg shadow-sm">
+            <BsLayoutWtf className="text-cu-pink text-xl" />
+          </div>
+          <h4 className="text-heading font-nunito text-xl font-bold">Wireframing</h4>
+          <p className="text-cuGray text-base">Plan your digital products with detailed wireframes that outline structure and flow.</p>
+          <div className="text-cu-pink group-hover:translate-x-1 flex items-center gap-2 mt-1 font-bold transition-all duration-300">
+            <a href="#">Learn more</a>
             <HiArrowRight size={20} />
           </div>
         </li>

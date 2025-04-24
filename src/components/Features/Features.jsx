@@ -14,32 +14,32 @@ export default function Features() {
       <h3 className="section__title">Explore Our Cutting-Edge Features</h3>
       <div className="px-5 rounded-xl">
         {/* First Section of Page */}
-        <div className="flex flex-col justify-center gap-4 2xl:flex-row 2xl:justify-between 2xl:mt-6">
+        <div className="flex flex-col justify-center  gap-4 2xl:flex-row 2xl:justify-between 2xl:mt-6 2xl:items-center">
           <div className=" lg:max-w-[472px] lg:m-auto 2xl:max-w-1/2">
             <img className="w-full " src="/images/features/features.webp" alt="our features section image" />
           </div>
           <ul className="grid grid-cols-1 grid-rows-6 gap-6 gap-x-8 lg:grid-cols-2 lg:grid-rows-3 2xl:max-w-1/2 2xl:justify-center 2xl:items-center">
-            <li className="flex items-center justify-between gap-4 px-5 py-5 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-7 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">Unmatched Reliability</h3>
             </li>
-            <li className="flex items-center justify-between gap-4 px-3 py-3 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-4 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">Exceptional Performance</h3>
             </li>
-            <li className="flex items-center justify-between gap-4 px-3 py-3 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-4 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">Innovative Solutions</h3>
             </li>
-            <li className="flex items-center justify-between gap-4 px-3 py-3 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-4 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">Seamless Integration</h3>
             </li>
-            <li className="flex items-center justify-between gap-4 px-3 py-3 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-4 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">Advanced Security</h3>
             </li>
-            <li className="flex items-center justify-between gap-4 px-3 py-3 rounded-lg shadow-value-card">
+            <li className="flex items-center justify-between gap-4 px-5 py-7 rounded-lg shadow-value-card">
               <FaCheck className="p-1 text-lg rounded-sm text-accent bg-accent-light w-7 h-7" />
               <h3 className="text-lg font-bold text-heading font-nunito">User-Friendly Design</h3>
             </li>
@@ -48,7 +48,7 @@ export default function Features() {
         {/* Second Section Of Page */}
         <div className="flex flex-col gap-5 mt-25 2xl:flex-row-reverse">
           <div className="lg:max-w-[472px] lg:m-auto xl:flex-1/3">
-            <img className="w-full " src="/images/features/features2.png" alt="" />
+            <img className="w-full " src="/images/features/features2.webp" alt="" />
           </div>
           <ul className="grid grid-cols-1 grid-rows-6 gap-5 mt-10 lg:grid-cols-2 lg:grid-rows-3 xl:flex-1/2 2xl:items-center ">
             <li className="flex gap-4">

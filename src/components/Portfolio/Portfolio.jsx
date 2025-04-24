@@ -34,9 +34,9 @@ export default function Portfolio() {
   const filteredItems = getFilteredItems();
 
   return (
-    <section className="flex flex-col items-center justify-center gap-8 text-center my-25 px-4 sm:px-6">
+    <section className="my-25 sm:px-6 flex flex-col items-center justify-center gap-8 px-4 text-center">
       <h2 className="section__subtitle text-accent">Portfolio</h2>
-      <h3 className="section__title text-3xl sm:text-4xl md:text-5xl font-bold mb-8">Check our latest work</h3>
+      <h3 className="section__title sm:text-4xl md:text-5xl mb-8 text-3xl font-bold">Check our latest work</h3>
 
       {/* Category filter tabs */}
       <ul className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 font-roboto text-sm sm:text-[14px] font-medium">
@@ -54,41 +54,41 @@ export default function Portfolio() {
 
       {/* Loading and error states */}
       {loading && (
-        <div className="flex justify-center items-center py-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
+        <div className="flex items-center justify-center py-12">
+          <div className="animate-spin border-accent w-12 h-12 border-t-2 border-b-2 rounded-full"></div>
         </div>
       )}
-      {error && <p className="text-red-500 py-8">{error}</p>}
+      {error && <p className="py-8 text-red-500">{error}</p>}
 
       {/* Portfolio items grid */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mt-8">
+      <div className="sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 grid w-full grid-cols-1 gap-6 mt-8">
         {filteredItems.map(item => (
           <div
             key={`${item.category}-${item.id}`}
-            className="group relative overflow-hidden rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
+            className="group hover:shadow-xl relative overflow-hidden transition-all duration-300 rounded-md shadow-lg"
           >
-            <div className="relative aspect-square overflow-hidden">
+            <div className="aspect-square relative overflow-hidden">
               <img
                 src={item.productImage}
                 alt={item.productName}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="group-hover:scale-105 object-cover w-full h-full transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+              <div className="group-hover:bg-opacity-20 absolute inset-0 transition-all duration-300 bg-opacity-0"></div>
             </div>
             <div className="p-5 bg-white">
-              <div className="flex justify-between items-center mb-3">
-                <h4 className="text-heading text-lg sm:text-xl font-nunito font-bold">{item.productName}</h4>
-                <span className="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent uppercase">{item.category}</span>
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="text-heading sm:text-xl font-nunito text-lg font-bold">{item.productName}</h4>
+                <span className="bg-accent/10 text-accent px-2 py-1 text-xs uppercase rounded-md">{item.category}</span>
               </div>
-              <p className="text-cuGray text-sm sm:text-base">{item.productDescription}</p>
+              <p className="text-cuGray sm:text-base text-sm">{item.productDescription}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* Show message when no items are found */}
-      {data && filteredItems.length === 0 && <div className="py-12 text-cuGray text-lg">No items found in this category.</div>}
+      {data && filteredItems.length === 0 && <div className="text-cuGray py-12 text-lg">No items found in this category.</div>}
     </section>
   );
 }

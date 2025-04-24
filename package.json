@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@agentdeskai/browser-tools-mcp": "^1.2.1",
     "@tailwindcss/vite": "^4.0.8",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.7.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
