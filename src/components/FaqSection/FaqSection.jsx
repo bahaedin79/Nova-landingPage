@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi2';
 import { useFetch } from '../../hooks/useFetch';
 
@@ -41,7 +41,9 @@ const localFaqs = [
   },
 ];
 
-const initialFaqData = { faqs: localFaqs };
+const initialFaqData = {
+  faqs: localFaqs,
+};
 
 export default function FaqAccordion() {
   const { data, error, loading } = useFetch('./faqs.json', initialFaqData);
@@ -58,50 +60,57 @@ export default function FaqAccordion() {
 
   // رندر آیتم‌های FAQ
   const renderFaqItem = faq => (
-    <li key={faq.id} className="text-left hover:cursor-pointer pb-4 border-b-1 border-gray-300" onClick={() => toggleFaq(faq.id)}>
-      <div className="flex items-start justify-between">
-        <h3 className="text-accent text-base font-nunito font-semibold flex-1 pe-4">{faq.question}</h3>
+    <li key={faq.id} className='pb-4 text-left border-gray-300 hover:cursor-pointer border-b-1' onClick={() => toggleFaq(faq.id)}>
+      <div className='flex items-start justify-between'>
+        <h3 className='flex-1 text-base font-semibold text-accent font-nunito pe-4'>{faq.question}</h3>
         <HiChevronDown
           className={`text-2xl text-accent transition-transform duration-300 flex-shrink-0 ${activeId === faq.id ? 'rotate-180' : ''}`}
         />
       </div>
       <p
         className={`text-base font-roboto text-default mt-2.5 overflow-hidden transition-all duration-300 ease-in-out
-        ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-      >
+        ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         {faq.answer}
       </p>
     </li>
   );
 
   return (
-    <section className="flex flex-col items-center justify-center gap-8 text-center my-25">
-      <h2 className="section__subtitle">F.A.Q</h2>
-      <h3 className="section__title">Frequently Asked Questions</h3>
+    <section className='flex flex-col items-center justify-center gap-8 text-center my-25'>
+      <h2 className='section__subtitle'>F.A.Q</h2>
+      <h3 className='section__title'>Frequently Asked Questions</h3>
 
       <div>
-        {error && <div className="text-base font-nunito font-semibold mb-4 p-3 bg-yellow-100 text-yellow-800 rounded">{error}</div>}
-        {loading && <div className="text-base font-nunito font-semibold mb-4 p-3 bg-cyan-100 text-blue-800 rounded">Data is Loading ...</div>}
+        {error && (
+          <div className='p-3 mb-4 text-base font-semibold text-yellow-800 bg-yellow-100 rounded font-nunito'>{error}</div>
+        )}
+        {loading && (
+          <div className='p-3 mb-4 text-base font-semibold text-blue-800 rounded font-nunito bg-cyan-100'>
+            Data is Loading ...
+          </div>
+        )}
         {readyFaq.length === 0 ? (
-          <div className="text-base font-nunito font-semibold mb-4 p-3 bg-red-100 text-red-800 rounded">No data available</div>
+          <div className='p-3 mb-4 text-base font-semibold text-red-800 bg-red-100 rounded font-nunito'>No data available</div>
         ) : null}
       </div>
 
       {/* نمایش موبایل - همه آیتم‌ها در یک ستون */}
-      <div className="w-full xl:hidden">
-        <ul className="w-full flex flex-col gap-7">
+      <div className='w-full xl:hidden'>
+        <ul className='flex flex-col w-full gap-7'>
           {readyFaq.map(faq => (
-            <li key={faq.id} className="text-left hover:cursor-pointer pb-4 border-b-1 border-gray-300" onClick={() => toggleFaq(faq.id)}>
-              <div className="flex items-start justify-between">
-                <h3 className="text-accent text-base font-nunito font-semibold flex-1 pe-4">{faq.question}</h3>
+            <li
+              key={faq.id}
+              className='pb-4 text-left border-gray-300 hover:cursor-pointer border-b-1'
+              onClick={() => toggleFaq(faq.id)}>
+              <div className='flex items-start justify-between'>
+                <h3 className='flex-1 text-base font-semibold text-accent font-nunito pe-4'>{faq.question}</h3>
                 <HiChevronDown
                   className={`text-2xl text-accent transition-transform duration-300 flex-shrink-0 ${activeId === faq.id ? 'rotate-180' : ''}`}
                 />
               </div>
               <p
                 className={`text-base font-roboto text-default mt-2.5 overflow-hidden transition-all duration-300 ease-in-out
-                ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-              >
+                ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                 {faq.answer}
               </p>
             </li>
@@ -110,22 +119,24 @@ export default function FaqAccordion() {
       </div>
 
       {/* نمایش دسکتاپ - دو ستون مجزا */}
-      <div className="w-full hidden xl:flex xl:flex-row xl:gap-16">
+      <div className='hidden w-full xl:flex xl:flex-row xl:gap-16'>
         {/* ستون اول */}
-        <div className="w-full">
-          <ul className="w-full flex flex-col gap-7">
+        <div className='w-full'>
+          <ul className='flex flex-col w-full gap-7'>
             {leftColumnFaqs.map(faq => (
-              <li key={faq.id} className="text-left hover:cursor-pointer pb-4 border-b-1 border-gray-300" onClick={() => toggleFaq(faq.id)}>
-                <div className="flex items-start justify-between">
-                  <h3 className="text-accent text-base font-nunito font-semibold flex-1 pe-4">{faq.question}</h3>
+              <li
+                key={faq.id}
+                className='pb-4 text-left border-gray-300 hover:cursor-pointer border-b-1'
+                onClick={() => toggleFaq(faq.id)}>
+                <div className='flex items-start justify-between'>
+                  <h3 className='flex-1 text-base font-semibold text-accent font-nunito pe-4'>{faq.question}</h3>
                   <HiChevronDown
                     className={`text-2xl text-accent transition-transform duration-300 flex-shrink-0 ${activeId === faq.id ? 'rotate-180' : ''}`}
                   />
                 </div>
                 <p
                   className={`text-base font-roboto text-default mt-2.5 overflow-hidden transition-all duration-300 ease-in-out
-                  ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-                >
+                  ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                   {faq.answer}
                 </p>
               </li>
@@ -134,25 +145,32 @@ export default function FaqAccordion() {
         </div>
 
         {/* ستون دوم */}
-        <div className="w-full">
-          <ul className="w-full flex flex-col gap-7">
+        <div className='w-full'>
+          <ul className='flex flex-col w-full gap-7'>
             {rightColumnFaqs.map(faq => (
-              <li key={faq.id} className="text-left hover:cursor-pointer pb-4 border-b-1 border-gray-300" onClick={() => toggleFaq(faq.id)}>
-                <div className="flex items-start justify-between">
-                  <h3 className="text-accent text-base font-nunito font-semibold flex-1 pe-4">{faq.question}</h3>
+              <li
+                key={faq.id}
+                className='pb-4 text-left border-gray-300 hover:cursor-pointer border-b-1'
+                onClick={() => toggleFaq(faq.id)}>
+                <div className='flex items-start justify-between'>
+                  <h3 className='flex-1 text-base font-semibold text-accent font-nunito pe-4'>{faq.question}</h3>
                   <HiChevronDown
                     className={`text-2xl text-accent transition-transform duration-300 flex-shrink-0 ${activeId === faq.id ? 'rotate-180' : ''}`}
                   />
                 </div>
                 <p
                   className={`text-base font-roboto text-default mt-2.5 overflow-hidden transition-all duration-300 ease-in-out
-                  ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
-                >
+                  ${activeId === faq.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                   {faq.answer}
                 </p>
               </li>
             ))}
           </ul>
+        </div>
+        <div className='text-sm text-center font-roboto'>
+          <h1 className='flex justify-between pt-5 text-center sm:text-left md:text-center lg:text-2xl lg:text-left md:font-bold'>
+            Hello
+          </h1>
         </div>
       </div>
     </section>

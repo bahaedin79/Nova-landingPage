@@ -113,7 +113,11 @@
   }
 
   .section__title {
-    @apply text-heading text-3xl font-nunito font-bold;
+    @apply text-heading font-nunito text-3xl font-bold;
+  }
+
+  #footer .footer__link {
+    @apply flex items-center transition-all hover:text-accent active:text-accent cursor-pointer;
   }
 }
 
@@ -127,12 +131,13 @@
   .testimonials__star.active {
     @apply text-yellow-500;
   }
+
   /* swiper Styles */
   .swiper-slide {
     @apply opacity-40 transition-all;
   }
   .swiper-slide-active {
-    @apply opacity-100 transition-all;
+    @apply transition-all opacity-100;
   }
   .swiper-pagination-bullet {
     @apply w-2.5! h-2.5! bg-gray-300! opacity-50! transition-all! duration-300! rounded-full!;

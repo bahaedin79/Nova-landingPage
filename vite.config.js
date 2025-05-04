@@ -7,8 +7,4 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/Nova-landingPage/', // برای GitHub Pages
-  preview: {
-    base: '/', // برای تست محلی
-  },
 });
