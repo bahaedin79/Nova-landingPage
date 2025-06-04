@@ -15,7 +15,7 @@ import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
-    <div className="container-fluid">
+    <div className='container-fluid'>
       <Hero />
       <About />
       <Commitment />

@@ -167,11 +167,6 @@ export default function FaqAccordion() {
             ))}
           </ul>
         </div>
-        <div className='text-sm text-center font-roboto'>
-          <h1 className='flex justify-between pt-5 text-center sm:text-left md:text-center lg:text-2xl lg:text-left md:font-bold'>
-            Hello
-          </h1>
-        </div>
       </div>
     </section>
   );

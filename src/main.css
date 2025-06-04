@@ -50,7 +50,6 @@
   font-family: nunito;
   font-style: normal;
   font-weight: 200 700;
-
   font-display: swap;
   src: url('/font/Nunito/Nunito-VariableFont.ttf') format('truetype');
 }
@@ -79,14 +78,9 @@
   font-display: swap;
   src: url('/font/Poppins/Poppins-SemiBold.ttf') format('truetype');
 }
-
 @layer components {
   .container-fluid {
-    @apply mx-auto px-3.5
-    sm:max-w-[540px]
-    lg:max-w-[720px]
-    xl:max-w-[960px] 
-    2xl:max-w-[1320px];
+    @apply px-3.5 max-w-[1320px] mx-auto;
   }
 
   .primary__btn {
