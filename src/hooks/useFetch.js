@@ -5,7 +5,6 @@ export const useFetch = (url, initialData = null) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // استفاده از useRef برای ذخیره initialData
   const initialDataRef = useRef(initialData);
 
   useEffect(() => {
@@ -21,7 +20,6 @@ export const useFetch = (url, initialData = null) => {
       } catch (error) {
         console.error('Error fetching data:', error);
         setError('Error retrieving information. Using fallback data.');
-        // استفاده از مقدار ذخیره شده در ref
         if (initialDataRef.current) {
           setData(initialDataRef.current);
         }
@@ -31,7 +29,7 @@ export const useFetch = (url, initialData = null) => {
     };
 
     fetchData();
-  }, [url]); // حذف initialData از dependency array
+  }, [url]);
 
   return { data, error, loading };
 };

@@ -1,5 +1,5 @@
-import React from 'react';
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
 export default function PricingCard({
   selected,
@@ -18,9 +18,8 @@ export default function PricingCard({
       className={clsx(
         `flex flex-col bg-white rounded-2xl shadow-lg px-8 py-10 border-2 relative w-full max-w-[350px] min-h-[540px] xl:px-7`,
         selected ? borderColor : 'border-gray-200',
-        className
-      )}
-    >
+        className,
+      )}>
       <span className={clsx('w-7 h-7 flex items-center justify-center mb-2 rounded-md', iconBgColor)}>
         <span className={clsx('w-3 h-3 rounded', iconColor)}></span>
       </span>
