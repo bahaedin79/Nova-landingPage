@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <>
       <section
-        id="footer"
+        id="contact"
         className="mt-15 grid grid-cols-1 gap-10 border-b-2 border-accent/20 pb-5 sm:grid-cols-2 
         lg:grid-cols-3 xl:grid-cols-4">
         {/* Address Part */}

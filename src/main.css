@@ -151,3 +151,39 @@
     transform: translateY(0px);
   }
 }
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #4154f1;
+  border-radius: 20px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4154f1;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.3s infinite;
+    -webkit-animation: wheel 1.3s infinite;
+  }
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}

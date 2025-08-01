@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
 import Commitment from '../components/Commitment/Commitment';
@@ -15,18 +14,26 @@ import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
-    <div className='container-fluid'>
+    <div className="container-fluid">
       <Hero />
-      <About />
+      <div id="about">
+        <About />
+      </div>
       <Commitment />
       <Stats />
       <Features />
-      <Services />
+      <div id="services">
+        <Services />
+      </div>
       <Pricing />
       <FaqSection />
-      <Portfolio />
+      <div id="portfolio">
+        <Portfolio />
+      </div>
       <Testimonials />
-      <Team />
+      <div id="team">
+        <Team />
+      </div>
       <NewsLetter />
       <Footer />
     </div>

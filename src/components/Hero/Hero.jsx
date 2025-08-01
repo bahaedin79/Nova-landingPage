@@ -1,10 +1,9 @@
-import React from 'react';
 import { HiOutlinePlayCircle } from 'react-icons/hi2';
 import { HiArrowRight } from 'react-icons/hi2';
 
 export default function Hero() {
   return (
-    <section className="mt-10 flex flex-col justify-center xl:flex-row-reverse xl:items-center xl:my-40">
+    <section className="mt-10 flex flex-col justify-center xl:flex-row-reverse xl:items-center xl:my-40 relative">
       <img
         className=" lg:m-auto xl:w-1/2 xl:max-w-none"
         src="/images/development-animate.svg"
@@ -16,7 +15,8 @@ export default function Hero() {
             Build Stunning Websites to Elevate Your Business
           </h1>
           <p className="text-cuGray text-lg font-roboto">
-            Partner with our expert team to create modern, responsive, and SEO-friendly websites tailored to your business needs.
+            Partner with our expert team to create modern, responsive, and SEO-friendly websites tailored to your
+            business needs.
           </p>
         </div>
         <div
@@ -32,6 +32,9 @@ export default function Hero() {
           </a>
         </div>
       </div>
+      <a href="#about" className="absolute -bottom-32 left-1/2 -translate-x-1/2 hidden xl:block">
+        <div className="mouse"></div>
+      </a>
     </section>
   );
 }
