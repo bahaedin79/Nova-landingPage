@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import CommitmentCard from './CommitmentCard';
 
 const commitmentData = [
@@ -24,16 +26,51 @@ const commitmentData = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 export default function Value() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
-    <section id="value" className="mt-25 flex flex-col items-center justify-center gap-5">
-      <h2 className="section__subtitle">Our Commitment</h2>
-      <h3 className="section__title max-w-80 text-center">What We Prioritize in Our Services</h3>
-      <div
+    <motion.section
+      ref={ref}
+      id="value"
+      className="mt-25 flex flex-col items-center justify-center gap-5"
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}>
+      <motion.h2 className="section__subtitle" variants={itemVariants}>
+        Our Commitment
+      </motion.h2>
+      <motion.h3 className="section__title max-w-80 text-center" variants={itemVariants}>
+        What We Prioritize in Our Services
+      </motion.h3>
+      <motion.div
         className="grid grid-cols-1 grid-rows-3 gap-5 mt-10
         lg:grid-cols-2 lg:grid-rows-2
         xl:grid-cols-3 xl:grid-rows-1
-        2xl:[grid-template-columns:repeat(3,360px)] 2xl:justify-between 2xl:gap-0 2xl:w-full">
+        2xl:[grid-template-columns:repeat(3,360px)] 2xl:justify-between 2xl:gap-0 2xl:w-full"
+        variants={containerVariants}>
         {commitmentData.map(data => (
           <CommitmentCard
             key={data.title}
@@ -43,7 +80,7 @@ export default function Value() {
             freePikUrl={data.freePikUrl}
           />
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

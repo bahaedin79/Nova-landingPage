@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import StatsCard from './statsCard';
 
 const stats = [
@@ -27,11 +29,29 @@ const stats = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 export default function Stats() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
   return (
-    <section
+    <motion.section
+      ref={ref}
       id="stats"
-      className="rounded-xl lg:grid-cols-2 lg:grid-rows-2 2xl:grid-cols-4 2xl:grid-rows-1 bg-accent-light grid grid-cols-1 grid-rows-3 gap-5 p-5 mt-20">
+      className="rounded-xl lg:grid-cols-2 lg:grid-rows-2 2xl:grid-cols-4 2xl:grid-rows-1 bg-accent-light grid grid-cols-1 grid-rows-3 gap-5 p-5 mt-20"
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}>
       {stats.map(stat => (
         <StatsCard
           key={stat.title}
@@ -41,6 +61,6 @@ export default function Stats() {
           iconColor={stat.iconColor}
         />
       ))}
-    </section>
+    </motion.section>
   );
 }

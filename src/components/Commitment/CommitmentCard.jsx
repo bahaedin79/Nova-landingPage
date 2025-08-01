@@ -1,6 +1,19 @@
+import { motion } from 'framer-motion';
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 export default function CommitmentCard({ imgSrc, title, desc, freePikUrl }) {
   return (
-    <div className="flex flex-col items-center gap-2 text-center p-5 rounded-xl group max-w-[336px] bg-accent-light  xl:max-w-none 2xl:max-w-[380px]">
+    <motion.div
+      className="flex flex-col items-center gap-2 text-center p-5 rounded-xl group max-w-[336px] bg-accent-light  xl:max-w-none 2xl:max-w-[380px]"
+      variants={itemVariants}>
       <div className="relative pt-3 mb-5">
         <img
           className="w-[250px] h-[200px] rounded-md xl:w-[297px] xl:h-[240px] object-cover "
@@ -17,6 +30,6 @@ export default function CommitmentCard({ imgSrc, title, desc, freePikUrl }) {
       </div>
       <h3 className="text-heading font-nunito text-2xl font-bold">{title}</h3>
       <p className="font-roboto text-base text-gray-600">{desc}</p>
-    </div>
+    </motion.div>
   );
 }
