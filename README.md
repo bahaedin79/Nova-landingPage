@@ -11,7 +11,6 @@ Nova یک صفحه فرود (Landing Page) مدرن و واکنش‌گراست �
 ## ✨ ویژگی‌ها
 
 - طراحی مدرن و ریسپانسیو 📱💻
-- انیمیشن‌های جذاب با Framer Motion 🎬
 - استفاده از React Router برای مدیریت صفحات 🔗
 - کامپوننت‌های قابل استفاده مجدد ♻️
 - استفاده از TailwindCSS برای استایل‌دهی سریع و حرفه‌ای 🎨
@@ -24,7 +23,6 @@ Nova یک صفحه فرود (Landing Page) مدرن و واکنش‌گراست �
 - React 19 ⚛️
 - Vite ⚡
 - TailwindCSS 🌈
-- Framer Motion 🏃‍♂️
 - React Router DOM 🛣️
 - React Icons 🎯
 - Swiper 🏄‍♂️
@@ -54,7 +52,6 @@ Nova is a modern, responsive, and highly customizable landing page template, per
 ## ✨ Features
 
 - Modern & responsive design 📱💻
-- Smooth animations with Framer Motion 🎬
 - Routing with React Router 🔗
 - Reusable components ♻️
 - Fast styling with TailwindCSS 🎨
@@ -67,7 +64,6 @@ Nova is a modern, responsive, and highly customizable landing page template, per
 - React 19 ⚛️
 - Vite ⚡
 - TailwindCSS 🌈
-- Framer Motion 🏃‍♂️
 - React Router DOM 🛣️
 - React Icons 🎯
 - Swiper 🏄‍♂️
