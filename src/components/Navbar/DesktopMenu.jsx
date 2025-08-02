@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import NavLinkItem from './NavLinkItem';
 
 const navLinks = [
@@ -12,17 +13,28 @@ const navLinks = [
 
 export default function DesktopMenu() {
   return (
-    <ul
-      className="hidden 
-    xl:flex justify-center items-center gap-8 text-heading font-Poppins-SemiBold
-    2xl:gap-10
-    ">
+    <ul className="hidden xl:flex justify-center items-center gap-8 text-heading font-Poppins-SemiBold 2xl:gap-10">
       {navLinks.map(link => (
-        <li key={link.to} className="hover:text-accent hover:cursor-pointer transition-all duration-300 ease-out">
-          <NavLinkItem to={link.to} isScrollLink={link.isScrollLink} activeClass="text-accent" spy={true}>
+        <motion.li
+          key={link.to}
+          className="relative hover:cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: 'spring', stiffness: 300 }}>
+          <NavLinkItem
+            to={link.to}
+            isScrollLink={link.isScrollLink}
+            activeClass="text-accent"
+            spy={true}
+            className="pb-1">
             {link.text}
           </NavLinkItem>
-        </li>
+          <motion.div
+            className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
+            initial={{ scaleX: 0 }}
+            whileHover={{ scaleX: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        </motion.li>
       ))}
     </ul>
   );

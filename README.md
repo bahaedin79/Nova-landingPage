@@ -1,6 +1,6 @@
 # 🚀 Nova Landing Page
 
-A modern, responsive, and feature-rich landing page template built with the latest web technologies.
+A modern, responsive, and feature-rich landing page template built with the latest web technologies. This project showcases a professional online presence with smooth animations and a clean, refactored codebase.
 
 ---
 
@@ -11,8 +11,10 @@ Nova یک صفحه فرود (Landing Page) مدرن و واکنش‌گراست �
 ## ✨ ویژگی‌ها
 
 - طراحی مدرن و ریسپانسیو 📱💻
+- انیمیشن‌های جذاب با Framer Motion 🎬
+- شمارشگرهای متحرک در بخش آمار با React CountUp 📈
+- کامپوننت‌های قابل استفاده مجدد و کدبیس بازنویسی شده ♻️
 - استفاده از React Router برای مدیریت صفحات 🔗
-- کامپوننت‌های قابل استفاده مجدد ♻️
 - استفاده از TailwindCSS برای استایل‌دهی سریع و حرفه‌ای 🎨
 - آیکون‌های متنوع با React Icons ⭐
 - اسلایدر حرفه‌ای با Swiper 🖼️
@@ -24,6 +26,8 @@ Nova یک صفحه فرود (Landing Page) مدرن و واکنش‌گراست �
 - Vite ⚡
 - TailwindCSS 🌈
 - React Router DOM 🛣️
+- Framer Motion 🎞️
+- React CountUp 🔢
 - React Icons 🎯
 - Swiper 🏄‍♂️
 - ESLint & Prettier 🧹
@@ -52,8 +56,10 @@ Nova is a modern, responsive, and highly customizable landing page template, per
 ## ✨ Features
 
 - Modern & responsive design 📱💻
+- Engaging animations with Framer Motion 🎬
+- Animated counters in the stats section with React CountUp 📈
+- Reusable components & refactored codebase ♻️
 - Routing with React Router 🔗
-- Reusable components ♻️
 - Fast styling with TailwindCSS 🎨
 - Rich icon library via React Icons ⭐
 - Advanced sliders using Swiper 🖼️
@@ -65,6 +71,8 @@ Nova is a modern, responsive, and highly customizable landing page template, per
 - Vite ⚡
 - TailwindCSS 🌈
 - React Router DOM 🛣️
+- Framer Motion 🎞️
+- React CountUp 🔢
 - React Icons 🎯
 - Swiper 🏄‍♂️
 - ESLint & Prettier 🧹
@@ -89,6 +97,8 @@ Nova is a modern, responsive, and highly customizable landing page template, per
 ## 📁 Project Structure
 
 - `src/components/` – Reusable UI components
+  - `Navbar/` - Refactored Navbar components
+  - `Footer/` - Refactored Footer components
 - `src/pages/` – Main page layouts
 - `public/` – Static assets (images, icons, etc.)
 - `src/main.jsx` – App entry point
