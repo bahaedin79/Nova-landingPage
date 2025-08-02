@@ -27,7 +27,7 @@ export default function PricingCard({
   return (
     <motion.li
       className={clsx(
-        `flex flex-col bg-white rounded-2xl shadow-lg px-8 py-10 border-2 relative w-full max-w-[350px] min-h-[540px] xl:px-7 hover:scale-105 transition-transform`,
+        `flex flex-col bg-white rounded-2xl shadow-lg px-8 py-10 border-2 relative w-full max-w-[350px] min-h-[540px] mx-auto xl:px-7 hover:scale-105 transition-transform`,
         selected ? borderColor : 'border-gray-200',
         className,
       )}

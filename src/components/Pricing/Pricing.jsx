@@ -50,7 +50,7 @@ export default function Pricing() {
         variants={containerVariants}>
         {priceData &&
           priceData.map((price, idx) => (
-            <PricingCard key={price.id} {...price} className={idx === 2 ? 'lg:col-span-2 xl:col-auto mx-auto' : ''} />
+            <PricingCard key={price.id} {...price} className={idx === 2 ? 'lg:col-span-2 xl:col-auto' : ''} />
           ))}
       </motion.ul>
     </motion.section>
