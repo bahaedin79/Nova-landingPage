@@ -45,8 +45,7 @@ export default function Portfolio() {
             key={category}
             className={`px-4 py-2 rounded-md transition-all duration-300 cursor-pointer
               ${category === selectedCategory ? 'bg-accent text-white shadow-md' : 'bg-gray-100 hover:bg-gray-200 text-default'}`}
-            onClick={() => setSelectedCategory(category)}
-          >
+            onClick={() => setSelectedCategory(category)}>
             {category}
           </li>
         ))}
@@ -65,8 +64,7 @@ export default function Portfolio() {
         {filteredItems.map(item => (
           <div
             key={`${item.category}-${item.id}`}
-            className="group hover:shadow-xl relative overflow-hidden transition-all duration-300 rounded-md shadow-lg"
-          >
+            className="group hover:shadow-xl relative overflow-hidden transition-all duration-300 rounded-md shadow-lg">
             <div className="aspect-square relative overflow-hidden">
               <img
                 src={item.productImage}
@@ -88,7 +86,9 @@ export default function Portfolio() {
       </div>
 
       {/* Show message when no items are found */}
-      {data && filteredItems.length === 0 && <div className="text-cuGray py-12 text-lg">No items found in this category.</div>}
+      {data && filteredItems.length === 0 && (
+        <div className="text-cuGray py-12 text-lg">No items found in this category.</div>
+      )}
     </section>
   );
 }

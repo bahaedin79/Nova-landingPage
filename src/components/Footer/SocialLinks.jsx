@@ -14,8 +14,10 @@ export default function SocialLinks() {
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quaerat</p>
       <ul className="flex items-center justify-start gap-2 mt-2">
         {socialLinks.map((link, index) => (
-          <li key={index} className="w-10 h-10 rounded-md bg-accent-light flex items-center justify-center text-accent">
-            <a href={link.href}>
+          <li
+            key={index}
+            className=" rounded-md bg-accent-light flex items-center justify-center text-accent hover:scale-110 transition-transform">
+            <a href={link.href} className="p-3">
               <link.icon />
             </a>
           </li>
